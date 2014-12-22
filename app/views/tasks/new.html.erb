@@ -1,0 +1,18 @@
+Enter Tasks - <br><br>
+<%= form_for @task do |f| %>
+    <%= f.text_field :name %>
+    <%= f.submit "Add task" %>
+<% end %>
+<hr>
+<h4>Task List - </h4><br>
+<div id="rev">
+  <% if !@tasks.blank? %>
+      <ul>
+        <% for item in @tasks%>
+            <li><%= item.name %></li>
+            <br>
+        <%end%>
+      </ul>
+  <%else%>
+  <%end%>
+</div>
